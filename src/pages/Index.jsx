@@ -16,6 +16,20 @@ const Index = () => {
   return (
     <ChakraProvider theme={theme}>
       <Box minWidth="100vh" p={5}>
+        <Flex direction={{ base: "column", md: "row" }} justifyContent="space-between" mb={5}>
+          <Box p={5} boxShadow="md" borderRadius="md" bg="gray.50" width={{ base: "100%", md: "48%" }}>
+            <Heading size="md" mb={4}>
+              Normal Way Pricing
+            </Heading>
+            <Text fontSize="xl">${assets.reduce((total, asset) => total + asset.cost, 0)} / month</Text>
+          </Box>
+          <Box p={5} boxShadow="md" borderRadius="md" bg="gray.50" width={{ base: "100%", md: "48%" }}>
+            <Heading size="md" mb={4}>
+              The Skye Way Pricing
+            </Heading>
+            <Text fontSize="xl">${assets.reduce((total, asset) => total + asset.cost * 0.9, 0)} / month</Text>
+          </Box>
+        </Flex>
         <Flex justifyContent="space-between" alignItems="center" mb={5}>
           <Heading>Electricity Bill Inventory</Heading>
           <Stack direction="row" spacing={4}>
