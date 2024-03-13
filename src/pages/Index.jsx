@@ -1,6 +1,6 @@
 import React from "react";
 import { ChakraProvider, Box, Flex, Text, Heading, List, ListItem, ListIcon, IconButton, Image, Stack, Button, theme } from "@chakra-ui/react";
-import { FaWater, FaWind, FaSun, FaChartLine, FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
+import { FaWater, FaWind, FaSun, FaChartLine, FaSignInAlt, FaSignOutAlt, FaEdit } from "react-icons/fa";
 
 const assets = [
   { type: "Water", kwh: 5000, cost: 4500, icon: FaWater },
@@ -41,7 +41,12 @@ const Index = () => {
                     @{marketPrice.toFixed(2)}/kWh
                   </Text>
                 </Flex>
-                <Text fontWeight="bold">${asset.cost}</Text>
+                <Flex alignItems="center">
+                  <Text fontWeight="bold" mr={2}>
+                    ${asset.cost}
+                  </Text>
+                  <IconButton aria-label="Edit asset" icon={<FaEdit />} size="sm" variant="ghost" />
+                </Flex>
               </Flex>
             </ListItem>
           ))}
