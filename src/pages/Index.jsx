@@ -7,6 +7,7 @@ const assets = [
   { type: "Wind", kwh: 3000, cost: 3200, icon: FaWind },
   { type: "Solar", kwh: 7000, cost: 6500, icon: FaSun },
   { type: "Spot Market", kwh: 2000, cost: 2800, icon: FaChartLine },
+  { type: "Spot Market 2", kwh: 1, cost: 2800, icon: FaChartLine },
 ];
 
 const Index = () => {
