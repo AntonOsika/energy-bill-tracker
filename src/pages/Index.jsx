@@ -1,5 +1,6 @@
 import React from "react";
-import { ChakraProvider, Box, Flex, Text, Heading, List, ListItem, ListIcon, IconButton, Image, Stack, Button, theme } from "@chakra-ui/react";
+import { ChakraProvider, Box, Flex, Text, Heading, List, ListItem, ListIcon, IconButton, Stack, Button, theme } from "@chakra-ui/react";
+import PricingComparison from "../components/PricingComparison";
 import { FaWater, FaWind, FaSun, FaChartLine, FaSignInAlt, FaSignOutAlt, FaEdit } from "react-icons/fa";
 
 const assets = [
@@ -52,6 +53,7 @@ const Index = () => {
             </ListItem>
           ))}
         </List>
+        <PricingComparison assets={assets} />
       </Box>
     </ChakraProvider>
   );
